@@ -34,7 +34,9 @@ const Header = () => {
       (
         <div>
           <Link passHref href="/api/auth/signin">
-            <button>sign in</button>
+            <button className="bg-transparent hover:bg-blue-500 rounded w-20 mx-4">
+              sign in
+            </button>
           </Link>
         </div>
       )
