@@ -1,10 +1,15 @@
 import "tailwindcss/tailwind.css"
 import '../styles/globals.css'
+import { SessionProvider } from "next-auth/react"
 
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <SessionProvider>
+      <Component {...pageProps} />
+    </SessionProvider>
+  )
 }
 
 export default MyApp
