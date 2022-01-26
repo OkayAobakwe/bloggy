@@ -12,23 +12,24 @@ const Header = () => {
   }
 
   return(
-    <nav className="flex items-center justify-between bg-teal-800">
+    <nav className="flex items-center justify-between bg-teal-800 h-16 top-0">
       <div className="w-full block flex-grow ">
-        <div className="text-sm lg:flext-grow">
+        <div className="text-sm lg:flex-grow pl-5">
           <Link href="/">
             Posts
           </Link>
         </div>
       </div>
       {data?.user ? (
-        <>
+        <div className="flex items-center">
           <div>{data?.user.name}</div>
           <button
             onClick={() => signOut()}
+            className="bg-transparent hover:bg-blue-500 rounded w-20 mx-4"
           >
             sign out
           </button>
-        </>
+        </div>
       ): 
       (
         <div>
